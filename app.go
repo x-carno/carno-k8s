@@ -21,11 +21,7 @@ func (a *App) startup(ctx context.Context) {
 	a.ctx = ctx
 }
 
-func (a *App) menu(ctx context.Context) {
-
-}
-
 // Greet returns a greeting for the given name
 func (a *App) Greet(name string) string {
-	return fmt.Sprintf("Hello %s, It's show time jjjj!", name)
+	return fmt.Sprintf("Hello %s, It's show time!", name)
 }

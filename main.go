@@ -4,7 +4,6 @@ import (
 	"embed"
 
 	"github.com/wailsapp/wails/v2"
-	"github.com/wailsapp/wails/v2/pkg/menu"
 	"github.com/wailsapp/wails/v2/pkg/options"
 )
 
@@ -15,14 +14,6 @@ func main() {
 	// Create an instance of the app structure
 	app := NewApp()
 
-	AppMenu := menu.NewMenu()
-	// FileMenu := AppMenu.AddSubmenu("File")
-	// FileMenu.AddText("&Open", keys.CmdOrCtrl("o"), openFile)
-	// FileMenu.AddSeparator()
-	// FileMenu.AddText("Quit", keys.CmdOrCtrl("q"), func(_ *menu.CallbackData) {
-	// 	runtime.Quit()
-	// })
-
 	// Create application with options
 	err := wails.Run(&options.App{
 		Title:     "carno-k8s",
@@ -30,7 +21,6 @@ func main() {
 		Height:    768,
 		Assets:    assets,
 		OnStartup: app.startup,
-		Menu:      AppMenu,
 		Bind: []interface{}{
 			app,
 		},

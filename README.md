@@ -2,7 +2,7 @@
 
 ## About
 
-This is the official Wails React-TS template.
+This is the official Wails React template.
 
 ## Live Development
 
